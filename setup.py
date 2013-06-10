@@ -15,9 +15,6 @@ version = '0.2dev'
 long_description = (
     read('README.rst')
     + '\n' +
-    'History\n'
-    '**************\n'
-    + '\n' +
     read('docs', 'HISTORY.txt')
     )
 
