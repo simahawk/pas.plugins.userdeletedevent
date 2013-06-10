@@ -41,7 +41,6 @@ class UserDeletedEventPlugin(BaseUserManager):
 
     meta_type = 'User Manager Deleted Event'
     security = ClassSecurityInfo()
-    #implements(IUserManagement)
 
     security.declarePrivate('doDeleteUser')
     def doDeleteUser(self, userid):
