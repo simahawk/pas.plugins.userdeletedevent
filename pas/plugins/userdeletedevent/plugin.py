@@ -2,7 +2,6 @@
 ZODB based user manager with introspection and management interfaces.
 """
 
-from zope.interface import implements
 import zope.event
 
 from AccessControl import ClassSecurityInfo
@@ -13,12 +12,14 @@ from Products.PageTemplates.PageTemplateFile import PageTemplateFile
 
 from Products.PluggableAuthService.events import PrincipalDeleted
 
-from Products.PlonePAS.interfaces.plugins import IUserManagement
 from Products.PlonePAS.plugins.user import UserManager as BaseUserManager
 
 
-manage_addUserDeletedEventPlugin = PageTemplateFile("./templates/addUserDeletedEventPlugin",
-        globals(), __name__="manage_addUserDeletedEventPlugin")
+manage_addUserDeletedEventPlugin = PageTemplateFile(
+    "./templates/addUserDeletedEventPlugin",
+    globals(),
+    __name__="manage_addUserDeletedEventPlugin"
+)
 
 
 def addUserDeletedEventPlugin(dispatcher, id, title=None, REQUEST=None):
